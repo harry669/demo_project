@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Add</title>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        let p= $('<p></p>').text('This is P element Text');
+        $(document).ready(function()
+        {
+            $('body').append(p);
+        });
+
+        $(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#content").toggle(3000);
+  });
+});
+
+     $(document).ready(function()
+     {
+         $('#btn2').click(function()
+         {
+             $("#content").stop();
+         })
+     })
+
+    </script>
+    <style>
+         #content
+               {
+                   border:1px solid black;
+                   text-align: center;
+                   padding:5% 5%;
+                   background-color: black;
+                   color: whitesmoke;
+                   display: none;
+               }
+
+    </style>
+</head>
+<body>
+    <input type="button" value= "click to Stop wffect of content element" id="btn2">
+    <br>
+    <input type="button" value= "show/hide The content" id="btn1">
+    <div id= "content">
+        <h1>This is 1Content</h1>
+        <h2>This is 2Content</h2>
+    </div>
+</body>
+</html>

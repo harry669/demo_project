@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics Of Jquery</title>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+             $('#btn').click(function()
+             {
+                 $('p.hide').hide(1000).show(1000);
+                 alert( $('#link').attr("href"));
+             });
+              
+              $('p.show').click(function()
+              {
+                  alert( $('#fname').val());
+              })
+              
+              
+
+        });
+        
+        $(document).ready(function()
+        {    
+              /*
+             $('#btn1').click(function()
+             {
+                  let val= $('#content').css('display')
+                  if(val=="none")
+                  {
+                      $('#content').show();
+                  }
+
+                  else
+                  {
+                       $('#content').hide();
+                  }
+             })
+             */
+
+             
+        })
+       
+    </script>
+
+    <style>
+               #btn1
+               {
+                   background-color: red;
+                   border: 1px solid black;
+                   color:white;
+                   text-align: center;
+                   display: inline-block;
+                   font-size:20px;
+                   width:100%;
+               }
+
+               #content
+               {
+                   border:1px solid black;
+                   text-align: center;
+                   padding:5% 5%;
+                   background-color: black;
+                   color: whitesmoke;
+                   display: none;
+               }
+
+         
+    </style>
+</head>
+<body>
+    <p class = "show">click Here for Form value</p>
+    <button type="button" id="btn">Hide</button>
+    <p class="hide">This Must Be Hide</p>
+    <br>
+    <p>New functionality</p>
+    <hr>
+    <input type="button" value= "show/hide The content" id="btn1">
+    <div id= "content">
+        <h1>This is 1Content</h1>
+        <h2>This is 2Content</h2>
+    </div>
+    <input type="text" id="fname">
+    <a href= "www.game.com" id="link"></a>
+</body>
+</html>

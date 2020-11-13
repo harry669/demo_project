@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src= "js/validation.js"></script>
+</head>
+<body class= "bg-dark">
+    
+    <center><h1 class= "fixed-top"><b class= "text-info">Validation</b></h1></center>
+    <div class="container pt-3  bg-light text-dark border border-success rounded-lg shadow p-4" style="margin-top:80px">
+        <form action="validation.php" method="post">
+    <div class= " row form-group">
+       <div class= "col">
+        <b><label for="uname">FirstName:</label></b><br>
+        <input type="text" name="FirstName"  id= "fname" class= "form-control">
+        </div>
+    </div>
+    <div class= "row form-group">
+            <div class= "col">
+             <b><label for="uname">LastName:</label></b><br>
+             <input type="text" name="LastName" id= "lname" class= "form-control">
+             </div>
+             </div>
+    <div class= "row form-group">
+        <div class= "col">
+        <b><label for="email">Email:</label></b><br>
+        <input type="email" name= "email" id= "email"  class= "form-control" required>
+        </div>
+    </div>
+    <div class= "row form-group">
+        <div class= "col">
+        <b><label for= "password">Password:</label></b><br>
+        <input type="password" name="password" id="password" class= "form-control">
+        <br>
+        </div>
+    </div>
+    <div class= "row form-group">
+        <div class= "col">
+        <b><label for="email"> ConformPassword:</label></b><br>
+        <input type="password" name="cpassword" id="cpassword" class= "form-control">
+        </div>
+    </div>
+    <div class= "row form-group">
+        <div class= "col">
+        <b><label for="email">Comments:</label></b><br>
+        <textarea name="comment" rows="5"  id="comment" class= "form-control"></textarea>
+        </div>
+    </div>
+    <div class= "row form-group">
+        <div class= "col">
+        <b><label for="email">Age:</label></b><br>
+        <input type="text" name="age" id="age"  class= "form-control" disabled>
+        </div>
+    </div>
+  <!--radio buttons-->
+    <div class= "row form-group">
+        <div class= "col">
+            <input type="radio" name="gender" value="Male">
+             <label for="Male">Male</label>
+        </div>
+        <div class= "col">
+            <input type="radio" name="gender" value="Female">
+             <label for="Female">Female</label>
+        </div>
+        <div class= "col">
+            <input type="radio" name="gender" value="Others">
+            <label for="Others">Others</label>
+        </div>
+    </div>
+
+    <div class= "row form-group">
+        <div class= "col">
+            <input type="checkbox" id="hobby1" name="hobby1" value="reading" >
+            <label for="hobby1">Reading Books</label><br>         
+        </div>
+    </div>
+
+    <div class= "row form-group">
+        <div class= "col">
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday" class= "form-control">   
+        </div>
+    </div>
+    <div class= "row">
+        <div id="status"></div>
+     </div>
+         <div class= "row form-group">
+          <div class= "col">
+        <center><input type="submit" value="Submit" id="Submit" name= "Submit"></center>
+           </div>
+         </div>
+    </form>
+    </div>
+
+    <!--PHP CODE GOES HERE-->
+</body>
+</html>

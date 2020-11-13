@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Intro</title>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        //Ajax Data Loading and validation of data load
+
+        /*
+         $(document).ready(function(){
+
+             $('#btn1').click(function()
+             { 
+                  $('#data').load('data.txt',function(responseTxt,statusTxt,xhr)
+                  { 
+                        if(statusTxt == "success")
+                        {
+                            alert("content Load");
+                        }
+                        if(statusTxt == "error")
+      alert("Error: " + xhr.status + ": " + xhr.statusText);
+                  });
+             })
+         });
+         */
+
+             $(document).ready(function()
+             {
+                 $('#btn1').click(function()
+                 {
+                      $.post('ajax.php', {name: $('#fname').val()}, function(data,status)
+                      {
+                            alert(data+" "+status);
+                      });
+                 });
+             });
+    </script>
+</head>
+<body>
+    <!--Jquery AJAX-->
+    <input type= "text" id="fname">
+    <button type= "button" id="btn1">Send Data</button>
+</body>
+</html>
