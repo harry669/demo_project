@@ -1,0 +1,27 @@
+Application Database
+______________________
+
+Database Name:
+E-commerce
+___________
+1]UInfo
+Uid   
+Username
+Email
+Password
+
+2]UCat
+
+cid - Primary Key 
+cname - Cat Name(alphabate only Should not be null)
+cuser - categary belong to particular user only
+Application Validation Logic
+
+3]product table 
+
+________________________
+1]Client Side validation
+2]Server Side validation
+
+
+user    cat    product 
