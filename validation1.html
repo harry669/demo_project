@@ -17,24 +17,28 @@
        <div class= "col">
         <b><label for="uname">FirstName:</label></b><br>
         <input type="text" name="FirstName"  id= "fname" class= "form-control">
+        <div id="invalid-fname" class="text-danger"></div>
         </div>
     </div>
     <div class= "row form-group">
             <div class= "col">
              <b><label for="uname">LastName:</label></b><br>
              <input type="text" name="LastName" id= "lname" class= "form-control">
+             <div id="invalid-lname" class="text-danger"></div>
              </div>
              </div>
     <div class= "row form-group">
         <div class= "col">
         <b><label for="email">Email:</label></b><br>
         <input type="email" name= "email" id= "email"  class= "form-control" required>
+        
         </div>
     </div>
     <div class= "row form-group">
         <div class= "col">
         <b><label for= "password">Password:</label></b><br>
         <input type="password" name="password" id="password" class= "form-control">
+        <div id="invalid-password" class="text-danger"></div>
         <br>
         </div>
     </div>
@@ -42,12 +46,14 @@
         <div class= "col">
         <b><label for="email"> ConformPassword:</label></b><br>
         <input type="password" name="cpassword" id="cpassword" class= "form-control">
+        <div id="invalid-repassword" class="text-danger"></div>
         </div>
     </div>
     <div class= "row form-group">
         <div class= "col">
         <b><label for="email">Comments:</label></b><br>
         <textarea name="comment" rows="5"  id="comment" class= "form-control"></textarea>
+        <div id="invalid-comment" class="text-danger"></div>
         </div>
     </div>
     <div class= "row form-group">
@@ -70,24 +76,32 @@
             <input type="radio" name="gender" value="Others">
             <label for="Others">Others</label>
         </div>
+        <br>
+        
+       
     </div>
-
+        <div class= "row form-group">
+            <div class= "col">
+                <div id="invalid-gender" class="text-danger"></div>
+            </div>
+        </div>
     <div class= "row form-group">
         <div class= "col">
             <input type="checkbox" id="hobby1" name="hobby1" value="reading" >
-            <label for="hobby1">Reading Books</label><br>         
+            <label for="hobby1">Reading Books</label><br>   
+            <div id="invalid-checkbox" class="text-danger"></div>      
         </div>
+        
     </div>
 
     <div class= "row form-group">
         <div class= "col">
             <label for="birthday">Birthday:</label>
-            <input type="date" id="birthday" name="birthday" class= "form-control">   
+            <input type="date" id="birthday" name="birthday" class= "form-control">  
+            <div id="invalid-birthdate" class="text-danger"></div> 
         </div>
+
     </div>
-    <div class= "row">
-        <div id="status"></div>
-     </div>
          <div class= "row form-group">
           <div class= "col">
         <center><input type="submit" value="Submit" id="Submit" name= "Submit"></center>

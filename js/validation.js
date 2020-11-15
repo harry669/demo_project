@@ -67,13 +67,46 @@ $(document).ready(function(){
     let validpassword= password.match(rgx);
      //console.log(validpassword.length);
     let compare= password.localeCompare(cpassword);
-    if(name.length <= 0 || lastname.length <= 0  || comment.length <=0 || password.length!==cpassword.length || compare < 0 || compare > 0 || validpassword!=null || password.length<=0  || status1 == false || status2 == false || status3 == false)
+    if(name.length <= 0)
     {
-       
+          e.preventDefault();
+          document.getElementById('invalid-fname').innerHTML="first name requierd";
+          
+    }
+     if(lastname.length <= 0)
+    {
         e.preventDefault();
-        status.addClass(" container alert alert-danger");
-        status.text("Please Enter Correct credentials in  field");
-        //alert("Please Enter Correct value in  field");
+        document.getElementById('invalid-lname').innerHTML="last name requierd";
+    }
+    if(comment.length <=0)
+    {
+        e.preventDefault();
+        document.getElementById('invalid-comment').innerHTML="comments requierd";
+    }
+     if(compare < 0 || compare > 0 || password.length!==cpassword.length)
+    {
+        e.preventDefault();
+        document.getElementById('invalid-repassword').innerHTML="please enter correct password";
+    }
+    if(password.length<=0 || validpassword!=null)
+    {
+        e.preventDefault();
+        document.getElementById('invalid-password').innerHTML="please enter corrcet password credentials";
+    }
+    if(status1 == false)
+    { 
+         e.preventDefault();
+         document.getElementById('invalid-gender').innerHTML="please Choose Gender";
+    }
+     if(status2 == false)
+    {
+        e.preventDefault();
+        document.getElementById('invalid-birthdate').innerHTML="Birthdate required";
+    }
+    if(status3 == false)
+    {
+        e.preventDefault();
+        document.getElementById('invalid-checkbox').innerHTML="please Select checkbox";
     }
     else
     {
